@@ -33,6 +33,22 @@ body {
 a {
   text-decoration: none;
 }
+// ...existing code...
+/* TEMP HIDE: extension / injected badge (replace selector from DevTools if needed) */
+body::before,
+iframe[src*="aoudumber"],
+.aoudumber,
+.extension-badge,
+.floating-widget,
+[data-extension*="aoudumber"] {
+  display: none !important;
+  pointer-events: none !important;
+}
+/* generic: hide small fixed element bottom-left (use only if safe) */
+body > *[style*="position:fixed"][style*="left"] {
+  display: none !important;
+}
+/* ...existing code... */
 /* body::before{bottom:25px;right:25px;content:"\00A9  Instagram | @aoudumber.dev";padding:8px;border-radius:12px;background:black;color:white;opacity:.7;font-size:12px;position:fixed;z-index:999} */
 #bodyblur {
   display: block;
